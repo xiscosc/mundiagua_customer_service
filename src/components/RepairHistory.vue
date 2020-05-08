@@ -4,7 +4,7 @@
       <div class="p-2">
         <h5 class="repair-title-section">Historial de la reparación</h5>
         <ul class="timeline" >
-          <RepairHistoryRecord v-for="(record, idx) in reversedHistory" :key="idx" :record="record"></RepairHistoryRecord>
+          <RepairHistoryRecord v-for="(record, idx) in history" :key="idx" :record="record"></RepairHistoryRecord>
         </ul>
       </div>
       <div class="p-2">
@@ -21,11 +21,6 @@
     props: ['history'],
     components: {
       RepairHistoryRecord
-    },
-    computed: {
-      reversedHistory() {
-        return this.history.slice().reverse();
-      }
     }
   }
 </script>

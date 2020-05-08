@@ -38,7 +38,7 @@
             }
         },
         created() {
-            axios.get(`http://0.0.0.0:8000/api/v1/repairs/public/status/` + this.$route.params.repairId)
+            axios.get(process.env.VUE_APP_MUNDIAGUA_API_HOST + 'api/v1/repairs/public/status/' + this.$route.params.repairId + '/')
                 .then(response => {
                     // JSON responses are automatically parsed.
                     this.repair = response.data;
