@@ -16,9 +16,9 @@ Vue.use(VueRouter)
 Vue.config.productionTip = false
 
 const routes = [
-  { path: '*', component: NotFound, props: { error: '404 Not Found'} },
-  { path: '/', component: Home, name: 'home' },
-  { path: '/repair/:repairId', component: RepairStatus, name: 'repair-status' }
+  { path: '*', component: NotFound, props: { error: '404 Not Found'}, meta: {title: 'Mundiagua SL - Página no encontrada'} },
+  { path: '/', component: Home, name: 'home', meta: {title: 'Mundiagua SL - Consulta de reparaciones'} },
+  { path: '/repair/:repairId', component: RepairStatus, name: 'repair-status', meta: {title: 'Mundiagua SL - Estado de la reparación'} }
 ];
 
 const router = new VueRouter({
