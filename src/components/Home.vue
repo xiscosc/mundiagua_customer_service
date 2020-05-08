@@ -88,6 +88,14 @@ export default {
 
       return brand;
     }
+  },
+  created() {
+    if (this.$route.query.id) {
+      this.$router.push({
+        name: "repair-status",
+        params: { repairId: this.$route.query.id }
+      });
+    }
   }
 };
 </script>
