@@ -1,7 +1,5 @@
 <template>
   <div>
-    <b-alert v-if="isMotor" variant="warning" class="text-left" show>Las reparaciones de motor ya no pueden ser consultadas online. Si necesita ayuda póngase en contacto con nosotros</b-alert>
-    <b-alert v-if="!valid" variant="warning" class="text-left" show>Su id online de reparación debe empezar por A o X, por ejemplo A123456 o X987654</b-alert>
     <div class="d-flex flex-row text-left justify-content-between">
       <div class="p-2">
         <h5 class="repair-title-section">Consulta de reparaciones</h5>
@@ -24,6 +22,8 @@
         <font-awesome-icon icon="file-medical-alt" size="5x" style="color: navy"></font-awesome-icon>
       </div>
     </div>
+    <b-alert v-if="isMotor" variant="warning" class="text-left" show>Las reparaciones de motor ya no pueden ser consultadas online. Si necesita ayuda póngase en contacto con nosotros</b-alert>
+    <b-alert v-if="!valid" variant="warning" class="text-left" show>Su id online de reparación debe empezar por A o X, por ejemplo A123456 o X987654</b-alert>
   </div>
 </template>
 
