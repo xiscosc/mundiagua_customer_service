@@ -59,7 +59,7 @@ html {
 }
 
 body {
-  background-image: linear-gradient(10deg, navy, lightblue);
+  background-image: linear-gradient(135deg,#0061f2,rgba(105,0,199,.8));
   height: 100%;
   margin: 0;
   background-repeat: no-repeat;
