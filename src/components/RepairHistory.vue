@@ -3,28 +3,8 @@
     <div class="d-flex flex-row text-left justify-content-between">
       <div class="p-2">
         <h5 class="repair-title-section">Historial de la reparación</h5>
-        <ul class="timeline">
-          <li>
-            <p class="repair-status" href="#">Recepcionada</p>
-            <p class="float-right repair-data">20-02-2020 14:43</p>
-            <p
-              class="repair-data"
-            >Su maquinaria se encuentra en nuestras instalaciones a la espera de la reapzación del presupuesto</p>
-          </li>
-          <li>
-            <p class="repair-status" href="#">Recepcionada</p>
-            <p class="float-right repair-data">20-02-2020 14:43</p>
-            <p
-              class="repair-data"
-            >Su maquinaria se encuentra en nuestras instalaciones a la espera de la reapzación del presupuesto</p>
-          </li>
-          <li>
-            <p class="repair-status" href="#">Recepcionada</p>
-            <p class="float-right repair-data">20-02-2020 14:43</p>
-            <p
-              class="repair-data"
-            >Su maquinaria se encuentra en nuestras instalaciones a la espera de la reapzación del presupuesto</p>
-          </li>
+        <ul class="timeline" >
+          <RepairHistoryRecord v-for="(record, idx) in reversedHistory" :key="idx" :record="record"></RepairHistoryRecord>
         </ul>
       </div>
       <div class="p-2">
@@ -34,6 +14,21 @@
   </div>
 </template>
 
+
+<script>
+  import RepairHistoryRecord from "./RepairHistoryRecord";
+  export default {
+    props: ['history'],
+    components: {
+      RepairHistoryRecord
+    },
+    computed: {
+      reversedHistory() {
+        return this.history.slice().reverse();
+      }
+    }
+  }
+</script>
 
 <style scoped>
 ul.timeline {

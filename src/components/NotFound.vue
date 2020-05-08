@@ -12,7 +12,7 @@
     </div>
     <div class="d-flex flex-row text-left justify-content-between">
       <div class="p-2">
-        <p class="repair-data error-code">Código de error: 502 Bad gateway</p>
+        <p class="repair-data error-code">Código de error ({{ error }})</p>
       </div>
     </div>
   </div>
@@ -23,3 +23,9 @@
   font-size: xx-small;
 }
 </style>
+
+<script>
+  export default {
+    props: ['error']
+  }
+</script>
