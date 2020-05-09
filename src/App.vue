@@ -17,7 +17,7 @@
                     </svg>
                 </div>
             </div>
-            <div class="containermundiagua">
+            <div class="containermundiagua ml-2 mr-2">
                 <div class="row">
                     <div class="col-12 p-0">
                         <router-view></router-view>
