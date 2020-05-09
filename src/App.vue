@@ -45,6 +45,10 @@
             padding: 5%;
             padding-top: 0.5%;
         }
+
+        .mobile-icon {
+            display: none;
+        }
     }
 
     @media only screen and (min-width: 601px) {

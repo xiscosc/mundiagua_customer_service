@@ -1,13 +1,13 @@
 <template>
   <div>
     <div class="row">
-      <div class="col-sm-10">
+      <div class="col">
         <h5 class="repair-title-section">Historial de la reparación</h5>
         <ul class="timeline" >
           <RepairHistoryRecord v-for="(record, idx) in history" :key="idx" :record="record"></RepairHistoryRecord>
         </ul>
       </div>
-      <div class="col-sm-2 text-right">
+      <div class="col-sm-2 mobile-icon text-right">
         <font-awesome-icon icon="route" size="5x" class="icon-color"></font-awesome-icon>
       </div>
     </div>
