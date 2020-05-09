@@ -86,7 +86,7 @@
     }
 
     .repair-status {
-        color: navy;
+        color: #0061f2;
         margin-bottom: 2px;
     }
 
