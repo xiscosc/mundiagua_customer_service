@@ -1,13 +1,13 @@
 <template>
     <div id="app">
         <div class="container-fluid pl-0 pr-0">
-            <div class="mundaigua-header pt-4 pb-5">
-                <div class="row align-items-center">
-                    <div class="col-lg text-center">
+            <div class="containermundiagua mundaigua-header pt-4 pb-5">
+                <div class="row">
+                    <div class="col-lg mobile-text-left">
                         <img src="./assets/logo_blue.png" class="img-fluid head-image noprint"/>
                     </div>
                     <div class="col-lg">
-                        <h1 class="text-center text-white">Reparaciones</h1>
+                        <h1 class="mobile-text-right text-white">Reparaciones</h1>
                     </div>
                 </div>
                 <div class="svg-border-rounded text-white">
@@ -42,20 +42,33 @@
 <style>
     @media only screen and (max-width: 600px) {
         .containermundiagua {
-            padding: 5%;
-            padding-top: 0.5%;
+            padding: 0.5% 5% 5% 5%;
         }
 
         .mobile-icon {
             display: none;
         }
+
+        .mobile-text-right {
+            text-align: center !important;
+        }
+
+        .mobile-text-left {
+            text-align: center !important;
+        }
     }
 
     @media only screen and (min-width: 601px) {
         .containermundiagua {
-            padding: 20%;
-            padding-top: 0.5%;
-            padding-bottom: 3%;
+            padding: 0.5% 20% 3% 20%;
+        }
+
+        .mobile-text-right {
+            text-align: right !important;
+        }
+
+        .mobile-text-left {
+            text-align: left !important;
         }
     }
 
