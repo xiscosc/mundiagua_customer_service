@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div class="d-flex flex-row text-left justify-content-between">
-      <div class="p-2">
+    <div class="row">
+      <div class="col">
         <h5 class="repair-title-section">Historial de la reparación</h5>
         <ul class="timeline" >
           <RepairHistoryRecord v-for="(record, idx) in history" :key="idx" :record="record"></RepairHistoryRecord>
         </ul>
       </div>
-      <div class="p-2">
-        <font-awesome-icon icon="route" size="5x" style="color: navy"></font-awesome-icon>
+      <div class="col text-right">
+        <font-awesome-icon icon="route" size="5x" class="icon-color"></font-awesome-icon>
       </div>
     </div>
   </div>
@@ -53,7 +53,7 @@ ul.timeline > li:before {
   display: inline-block;
   position: absolute;
   border-radius: 50%;
-  border: 3px solid navy;
+  border: 3px solid #0061f2;
   left: 20px;
   width: 20px;
   height: 20px;
