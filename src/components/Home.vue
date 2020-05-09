@@ -1,24 +1,20 @@
 <template>
     <div>
         <div class="row mt-4">
-            <div class="col-md-12 text-center">
+            <div class="col text-center">
                 <font-awesome-icon icon="file-medical-alt" size="5x" class="icon-color"></font-awesome-icon>
             </div>
         </div>
-        <div class="row justify-content-center mt-4">
-                <b-form inline v-on:submit.prevent="checkRepair">
-                    <b-input-group class="mb-2 mr-sm-2 mb-sm-0" :prepend="repairType">
-                        <b-input v-model="repairId" :prepend="repairId" placeholder="Número de reparación"
-                                 v-on:keyup="checkId"></b-input>
-                    </b-input-group>
-
-                    <b-button :disabled="isMotor || !valid" pill @click="checkRepair" variant="primary"
-                              class="repair-button">Continuar
-                    </b-button>
+        <div class="row mt-4">
+            <div class="col justify-content-center text-center">
+                <b-form  v-on:submit.prevent="checkRepair">
+                    <b-input class="mb-2" v-model="repairId" :prepend="repairId" placeholder="Número de reparación" v-on:keyup="checkId"></b-input>
+                    <b-button :disabled="isMotor || !valid" pill @click="checkRepair" variant="primary" class="repair-button">Continuar </b-button>
                 </b-form>
+            </div>
         </div>
         <div class="row mt-4">
-            <div class="col-md-12">
+            <div class="col">
                 <b-alert v-if="isMotor" variant="warning" class="text-left" show>Las reparaciones de motor ya no pueden
                     ser consultadas online. Si necesita ayuda póngase en contacto con nosotros
                 </b-alert>
