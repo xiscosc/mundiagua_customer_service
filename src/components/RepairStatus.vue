@@ -38,7 +38,8 @@
             }
         },
         created() {
-            axios.get(process.env.VUE_APP_MUNDIAGUA_API_HOST + 'api/v1/repairs/public/status/' + this.$route.params.repairId + '/')
+            const repairId = this.$route.params.repairId.toUpperCase();
+            axios.get(process.env.VUE_APP_MUNDIAGUA_API_HOST + 'api/v1/repairs/public/status/' + repairId + '/')
                 .then(response => {
                     // JSON responses are automatically parsed.
                     this.repair = response.data;
