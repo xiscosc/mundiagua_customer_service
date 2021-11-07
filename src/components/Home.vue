@@ -17,7 +17,7 @@
                     ser consultadas online. Si necesita ayuda póngase en contacto con nosotros
                 </b-alert>
                 <b-alert v-if="!valid" variant="warning" class="text-left" show>Su id online de reparación debe empezar
-                    por A o X, por ejemplo A123456 o X987654
+                    por A, Z o X, por ejemplo A123456, Z794613 o X987654
                 </b-alert>
             </div>
         </div>
@@ -74,6 +74,9 @@
                         case "x":
                             brand = "Idegis";
                             break;
+                        case "z":
+                            brand = "Zodiac";
+                            break;    
                         case "e":
                             brand = "Motor";
                             break;
